@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakkımda | Ahmed Kararasul</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <canvas id="particle-canvas"></canvas>
+
+    <div class="sword-transition" id="sword-transition">
+        <div class="panel-top"></div>
+        <div class="panel-bottom"></div>
+        <div class="slash-line"></div>
+        <svg class="sword-icon" viewBox="0 0 60 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="blade" x1="30" y1="0" x2="30" y2="150" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#f5f5f5"/>
+                    <stop offset="50%" stop-color="#d4d4d4"/>
+                    <stop offset="100%" stop-color="#a0a0a0"/>
+                </linearGradient>
+            </defs>
+            <path d="M30 2 L36 130 L30 145 L24 130 Z" fill="url(#blade)" stroke="#888" stroke-width="0.5"/>
+            <line x1="30" y1="8" x2="30" y2="125" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <rect x="8" y="142" width="44" height="10" rx="3" fill="#d4af37"/>
+            <rect x="6" y="144" width="48" height="6" rx="2" fill="none" stroke="#b8960c" stroke-width="0.5"/>
+            <rect x="23" y="152" width="14" height="32" rx="4" fill="#6b4c1e"/>
+            <rect x="25" y="155" width="10" height="26" rx="3" fill="#8b6914"/>
+            <ellipse cx="30" cy="190" rx="9" ry="9" fill="#d4af37"/>
+            <ellipse cx="30" cy="190" rx="5" ry="5" fill="#b8960c"/>
+        </svg>
+    </div>
+
+    <div class="cursor-glow"></div>
+
+    <div class="mobile-menu">
+        <a href="index.html">Ana Sayfa</a>
+        <a href="about.html" class="active">Hakkımda</a>
+        <a href="projects.html">Projelerim</a>
+        <a href="contact.html">İletişim</a>
+    </div>
+
+    <header class="modern-header">
+        <nav>
+            <a href="index.html" class="logo">Ahmed Kararasul<span class="logo-dot"></span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="about.html" class="active">Hakkımda</a></li>
+                <li><a href="projects.html">Projelerim</a></li>
+                <li><a href="contact.html">İletişim</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section class="about-me-section hidden-element" style="padding-top: 60px;">
+            <div class="profile-wrapper tilt-element">
+                <div class="profile-frame">
+                    <img src="images/profile.jpg" alt="Ahmed Kararasul" class="profile-img">
+                </div>
+            </div>
+            <div class="about-content">
+                <span class="subtitle">Geliştirici Hikayesi</span>
+                <h1 class="glow-text" style="font-size: 3rem;">Ben <span class="gold-highlight">Ahmed Kararasul</span></h1>
+                <p class="description">
+                    Web dünyasının karmaşık yapılarını, zarif ve kullanıcı dostu arayüzlere dönüştüren bir front-end
+                    geliştiricisiyim. Dijital krallığımda sadece kod yazmıyor; markaların ve projelerin kimliklerini,
+                    modern web standartlarıyla birleştirerek yaşayan deneyimler inşa ediyorum.
+                </p>
+                <p class="description" style="margin-top: -15px;">
+                    Diyetisyen platformlarından endüstriyel kurumsal sitelere kadar geniş bir yelpazede projeler
+                    ürettim. Amacım her zaman performansı yüksek, tasarımı asil ve etkileşimi güçlü ürünler ortaya
+                    koymaktır.
+                </p>
+
+                <h3 style="color: var(--gold); font-family: var(--font-heading); margin-top: 30px; margin-bottom: 15px;">
+                    Yeteneklerim</h3>
+                <div class="skills-grid">
+                    <span class="skill-tag">HTML5 & CSS3</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">UI / UX Tasarımı</span>
+                    <span class="skill-tag">Responsive Mimari</span>
+                    <span class="skill-tag">C#</span>
+                </div>
+
+                <div class="stats-row hidden-element">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="4">0</span>
+                        <span class="stat-label">Tamamlanan Proje</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="5">0</span>
+                        <span class="stat-label">Kullanılan Teknoloji</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <span class="footer-line"></span>
+        <p>&copy; 2026 Ahmed Kararasul. Tüm hakları saklıdır.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmed Kararasul | Portfolyo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="loading">
+
+    <!-- PRELOADER -->
+    <div class="preloader">
+        <div class="preloader-logo" id="preloader-logo"></div>
+        <div class="preloader-bar">
+            <div class="preloader-bar-fill"></div>
+        </div>
+        <div class="preloader-tagline">Portfolyo Yükleniyor</div>
+    </div>
+
+    <!-- PARTICLE CANVAS -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- SWORD TRANSITION -->
+    <div class="sword-transition" id="sword-transition">
+        <div class="panel-top"></div>
+        <div class="panel-bottom"></div>
+        <div class="slash-line"></div>
+        <svg class="sword-icon" viewBox="0 0 60 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="blade" x1="30" y1="0" x2="30" y2="150" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#f5f5f5"/>
+                    <stop offset="50%" stop-color="#d4d4d4"/>
+                    <stop offset="100%" stop-color="#a0a0a0"/>
+                </linearGradient>
+            </defs>
+            <path d="M30 2 L36 130 L30 145 L24 130 Z" fill="url(#blade)" stroke="#888" stroke-width="0.5"/>
+            <line x1="30" y1="8" x2="30" y2="125" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <rect x="8" y="142" width="44" height="10" rx="3" fill="#d4af37"/>
+            <rect x="6" y="144" width="48" height="6" rx="2" fill="none" stroke="#b8960c" stroke-width="0.5"/>
+            <rect x="23" y="152" width="14" height="32" rx="4" fill="#6b4c1e"/>
+            <rect x="25" y="155" width="10" height="26" rx="3" fill="#8b6914"/>
+            <ellipse cx="30" cy="190" rx="9" ry="9" fill="#d4af37"/>
+            <ellipse cx="30" cy="190" rx="5" ry="5" fill="#b8960c"/>
+        </svg>
+    </div>
+
+    <!-- CURSOR GLOW -->
+    <div class="cursor-glow"></div>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu">
+        <a href="index.html" class="active">Ana Sayfa</a>
+        <a href="about.html">Hakkımda</a>
+        <a href="projects.html">Projelerim</a>
+        <a href="contact.html">İletişim</a>
+    </div>
+
+    <header class="modern-header">
+        <nav>
+            <a href="index.html" class="logo">Ahmed Kararasul<span class="logo-dot"></span></a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Ana Sayfa</a></li>
+                <li><a href="about.html">Hakkımda</a></li>
+                <li><a href="projects.html">Projelerim</a></li>
+                <li><a href="contact.html">İletişim</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section class="hook-container hidden-element">
+            <div class="hook-content">
+                <span class="subtitle">Hoş Geldiniz</span>
+                <h1 class="glow-text">Asaleti ve Modernliği<br><span class="gold-highlight">Etkileyici Tasarımlarla</span><br>Birleştiriyorum.</h1>
+                <p>Dijital krallığımda, sağlam temellere dayalı ve kullanıcı deneyimini en üst seviyeye taşıyan yaşayan
+                    arayüzler tasarlıyorum.</p>
+
+                <div class="action-buttons">
+                    <a href="projects.html" class="btn">Projelerimi İncele</a>
+                    <a href="contact.html" class="btn">İletişime Geç</a>
+                    <div class="project-count-badge">
+                        <span class="badge-icon">&#10022;</span>
+                        <span>Şu ana kadar <strong>3</strong> Tamamlanan Proje</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="opening-card-wrapper">
+                <canvas class="card-fire-canvas" id="card-fire"></canvas>
+                <div class="rune-orbit" id="rune-orbit">
+                    <span class="rune" style="--i:0">&#5794;</span>
+                    <span class="rune" style="--i:1">&#5765;</span>
+                    <span class="rune" style="--i:2">&#5805;</span>
+                    <span class="rune" style="--i:3">&#5791;</span>
+                    <span class="rune" style="--i:4">&#5816;</span>
+                    <span class="rune" style="--i:5">&#5786;</span>
+                    <span class="rune" style="--i:6">&#5799;</span>
+                    <span class="rune" style="--i:7">&#5768;</span>
+                </div>
+                <div class="noble-opening-card" id="global-3d-card">
+                    <div class="card-back-layer"></div>
+                    <div class="card-corner corner-tl"></div>
+                    <div class="card-corner corner-tr"></div>
+                    <div class="card-corner corner-bl"></div>
+                    <div class="card-corner corner-br"></div>
+                    <div class="card-glow"></div>
+                    <div class="card-glare" id="card-glare"></div>
+
+                    <div class="card-content">
+                        <div class="wax-seal">&#9733;</div>
+                        <span class="card-label">Öne Çıkan</span>
+                        <div class="medieval-divider"></div>
+                        <h2>Kararasul Project</h2>
+                        <p>Marka kimliği, asil açılış sayfası ve dijital sistemler üzerine etkileşimli bir çalışma.</p>
+                        <div class="medieval-divider"></div>
+                        <div class="tech-icons">
+                            <span class="tech-icon">HTML</span>
+                            <span class="tech-icon">CSS</span>
+                            <span class="tech-icon">JS</span>
+                            <span class="tech-icon">C#</span>
+                            <span class="tech-icon">SQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="scroll-indicator">
+            <span>Aşağı Kaydır</span>
+            <div class="arrow">&#8595;</div>
+        </div>
+
+        <section id="projects-section" class="featured-projects">
+            <div class="hidden-element" style="text-align: center;">
+                <span class="subtitle" style="padding-left: -10;">Seçme Çalışmalar</span>
+                <h2 class="section-title">Öne Çıkan Çalışmalarım</h2>
+                <p class="section-subtitle">Her proje, dijital dünyada bıraktığım bir iz.</p>
+            </div>
+
+            <div class="project-grid stagger-children">
+
+                <div class="project-card tilt-element hidden-element" data-title="Diyetisyen Web Sitesi"
+                    data-tech="HTML, CSS, JavaScript"
+                    data-desc="Sağlıklı yaşam ve beslenme programlarının sunulduğu, kullanıcı dostu ve asil bir arayüze sahip profesyonel diyetisyen web sitesi."
+                    data-image="images/diyetisyen.jpg">
+                    <div class="project-img-wrapper">
+                        <img src="images/diyetisyen.jpg" alt="Diyetisyen Portalı" class="project-img">
+                    </div>
+                    <div class="project-info">
+                        <h3>Diyetisyen Web Sitesi</h3>
+                        <button class="btn btn-small view-details-btn">Detayı Gör</button>
+                    </div>
+                </div>
+
+                <div class="project-card tilt-element hidden-element" data-title="Katodik Koruma Sistemleri"
+                    data-tech="HTML, CSS, JS"
+                    data-desc="Endüstriyel korozyon önleme alanında hizmet veren bir firma için hazırlanan, modern ve kurumsal kimliği yansıtan web sitesi tasarımı."
+                    data-image="images/katodik.jpg">
+                    <div class="project-img-wrapper">
+                        <img src="images/katodik.jpg" alt="Katodik Koruma Firması" class="project-img">
+                    </div>
+                    <div class="project-info">
+                        <h3>Katodik Koruma Sistemleri</h3>
+                        <button class="btn btn-small view-details-btn">Detayı Gör</button>
+                    </div>
+                </div>
+
+                <div class="project-card tilt-element hidden-element" data-title="Zaman Yolculuğu Bilet Portalı"
+                    data-tech="HTML, CSS, JS, Veritabanı"
+                    data-desc="Geçmişe veya geleceğe seyahat etmek isteyenler için kurgusal bir bilet satış platformu. Karmaşık veritabanı mimarisini arayüze yansıtan yaratıcı bir çalışma."
+                    data-image="images/zaman.jpg">
+                    <div class="project-img-wrapper">
+                        <img src="images/zaman.jpg" alt="Zaman Yolculuğu Acentesi" class="project-img">
+                    </div>
+                    <div class="project-info">
+                        <h3>Zaman Yolculuğu Bilet Portalı</h3>
+                        <button class="btn btn-small view-details-btn">Detayı Gör</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="about-me-section hidden-element">
+            <div class="profile-wrapper tilt-element from-left">
+                <div class="profile-frame">
+                    <img src="images/profile.jpg" alt="Ahmed Kararasul" class="profile-img">
+                </div>
+            </div>
+            <div class="about-content">
+                <span class="subtitle">Geliştirici Profili</span>
+                <h2>Ben Ahmed Kararasul</h2>
+                <p class="description">
+                    Modern web teknolojilerini asil tasarımlarla buluşturan bir geliştiriciyim.
+                    Dijital dünyada sağlam yapılar kurmak ve kullanıcı deneyimini en üst seviyeye
+                    taşımak için kod yazıyorum.
+                </p>
+                <div class="social-links">
+                    <a href="https://github.com/akararasul37" target="_blank" class="social-btn">GitHub Profilim</a>
+                    <a href="https://linkedin.com/in/akararasul37" target="_blank" class="social-btn">LinkedIn</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="project-modal" class="modal">
+        <div class="modal-content large-modal">
+            <button class="close-btn">&times;</button>
+            <div class="modal-body">
+                <div class="modal-image-container">
+                    <img id="modal-img" src="" alt="Proje Görseli">
+                </div>
+                <div class="modal-text-container">
+                    <span class="card-label">Proje Detayı</span>
+                    <h2 id="modal-title">Proje Adı</h2>
+                    <span id="modal-tech" class="tech-stack">Teknolojiler</span>
+                    <p id="modal-desc">Proje açıklaması burada yer alacak.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <span class="footer-line"></span>
+        <p>&copy; 2026 Ahmed Kararasul. Tüm hakları saklıdır.</p>
+    </footer>
+
+    <script>
+        // Preloader letter animation
+        const logo = document.getElementById('preloader-logo');
+        if (logo) {
+            const text = 'Ahmed Kararasul';
+            text.split('').forEach((char, i) => {
+                const span = document.createElement('span');
+                span.className = 'letter';
+                span.textContent = char === ' ' ? '\u00A0' : char;
+                span.style.animationDelay = (i * 0.05) + 's';
+                logo.appendChild(span);
+            });
+        }
+    </script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
